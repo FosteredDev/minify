@@ -51,67 +51,40 @@ if ((isset($_FILES['file']['type']) && $_FILES['file']['type'] != NULL)
 }else{
 ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Minifier</title>
-        <style type="text/css">
-            form#minifier{
-                position: absolute;
-width: 800px;
-left: 50%;
-margin-left: -400px;
-            }
-            
-            #minifier >textarea{
-                width: 100%;
-margin: 2px 0px;
-height: 430px;
-resize: vertical;
-            }
-            
-            #minifier >select, #minifier >input{
-                background: #333;
-color: #fff;
-width: 200px;
-height: 30px;
-            }
-            
-            input{
-                border: none !important;
-                
-            }
-            
-            #minify{
-                width: 200px;
-                height: 30px;
-                background: #333;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-            }
-            
-        </style>
-    </head>
-    <body>
+<?php 
+
+$pageTitle = "Fostered Development - Minify";
+$description = "Minify is a simple file minifier for HTML, CSS, jQuery/JavaScript, PHP and just about anything else";
+$keywords = "jQuery, sliders, slideshow, jQuery plugin, jquery slideshow, jquery slider, javascript slider, javascript, javascript plugin"
+        . "javascript slideshow, image slider, jquery image slider, image slideshow, jquery image slideshow, javascript image slider, javascript image slideshow";
+$header = $_SERVER['DOCUMENT_ROOT'];
+$header .= "/includes/header.php";
+
+include($header);
+
+?>
+
+<div id="bodyWrapper">
         <form id="minifier" action="" method="post" enctype="multipart/form-data">
+            
             <textarea id="unmin" name="unmin" rows="30" cols="100"></textarea>
+            <div id="min_field_wrapper">
             <select form="minifier" name="fileType">
                 <option>--Filetype--</option>
                 <option value='js'>JS</option>
                 <option value="php">PHP</option>
                 <option value="html">HTML</option>
                 <option value="css">CSS</option>
-            </select><br>
-            <label for="other">Other: </label><br>
-            <input type="text" name="other" id="other" /><br>
+            </select>
+            <label for="other">Other: </label>
+            <input type="text" name="other" id="other" />
             <input type="text" id="filename" name="fileName" placeholder="filename"/>
             <input type="file" name="file"/>
             <input type="hidden" name="MAX_FILE_SIZE" value="2097152" /> 
-            <button type="submit" id="minify">Minify</button>
+            <button type="submit" id="minify">Minify!</button>
+            </div>
         </form>
-        
+</div>      
         
     </body>
 </html>

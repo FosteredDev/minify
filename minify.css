@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 27, 2014, 1:32:01 PM
+    Author     : dylan_foster
+*/
+
+#bodyWrapper{
+min-height: 960px;
+min-width: 100%;
+background: #000;
+position: absolute;
+top: 0;
+    }
+    
+    
+form#minifier{
+position: relative;
+margin: 0 auto;
+margin-top: 200px;
+width: 600px;
+}
+
+            
+#minifier >textarea{
+width: 100%;
+margin: 2px 0px;
+height: 430px;
+resize: vertical;
+box-shadow: inset 0 0 15px 1px rgba(0,0,0,0.8);
+border: 1px solid rgba(204, 204, 204,0.8);
+border-radius: 5px;
+}
+
+#min_field_wrapper{
+    width:520px;
+    margin: 0 auto;
+}
+
+#min_field_wrapper > textarea:hover, #min_field_wrapper > textarea:focus {
+border: 1px solid #49e;
+}
+
+#min_field_wrapper >select, #min_field_wrapper >input{
+background: #333;
+color: #fff;
+width: 200px;
+height: 30px;
+border-radius: 5px;
+margin:10px;
+font-family: 'Gruppo';
+font-size: 18px;
+}
+ 
+select[name='fileType']{
+float:left;
+}
+
+input#filename{
+    float:left;
+}
+
+input[name='file']{
+    width:263px !important;
+}
+
+#min_field_wrapper label{
+color: #fff;
+font-family: 'Gruppo';
+font-size: 20px;
+}
+
+#minify{
+width: 485px;
+height: 40px;
+background: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+margin: 10px;
+font-family: 'Poller One';
+font-size: 24px;
+}
+            

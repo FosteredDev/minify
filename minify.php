@@ -1,32 +1,5 @@
 <?php
 
-
-/*function download($newFile){
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename='.basename($newFile));
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . filesize($newFile));
-    readfile($newFile);
-}
-
-
-
- function minifyUpload($files){
-             $ogFile=  pathinfo($files['file']['name']);
-             $part1 = $ogFile['filename'];
-             $part2 = '.min.';
-             $part3 = $ogFile['extension'];
-             $newFile = $part1.$part2.$part3;
-             $unminified = file_get_contents($files['file']['tmp_name']); 
-             $minified = str_replace(array("\r", "\n"), '', $unminified);
-             $handle = fopen($newFile, 'w') or die("cannot create the file: " .$newFile);
-             fwrite($handle, $minified);
-             fclose($handle);
-             download($newFile);
-}
-*/
 if ((isset($_FILES['file']['type']) && $_FILES['file']['type'] != NULL)
             || (isset($_POST['unmin']) && $_POST['unmin'] != NULL)
             || (isset($argv[1]))){

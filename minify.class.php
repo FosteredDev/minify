@@ -12,14 +12,12 @@ class MINIFY{
     
     function fromFile($file){
        $this->unminified = file_get_contents($file);
-       //return $this->unminified;
        $this->minified = str_ireplace(array("\r", "\n"), '', $this->unminified);
     }
     
     
     
     function toFile($file){
-       //$this->minified = str_ireplace(array("\r", "\n"), '', $this->unminified);
        $newFile = $this->minified;
        $handle = fopen($file, 'w+');
        fputs($handle, $newFile);
@@ -31,7 +29,6 @@ class MINIFY{
         header('Content-Type: application/octet-stream');
         header('Content-Disposition: attachment; filename='.basename($file));
         $output = fopen("php://output", "w");
-        //$this->minified = str_ireplace(array("\r", "\n"), '', $this->unminified);
         $newFile = $this->minified;
         fputs($output, $newFile);
     }
